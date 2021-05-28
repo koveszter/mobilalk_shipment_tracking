@@ -2,10 +2,13 @@
 
 Készítette: Kovács Eszter - D3WQSY
 
-Tracking codes: CTAFT0000160477YQ
-                ET283232758FH
-                RA123456789CN
-                HS325713857HW
-                RU3825827384GH
+Az applikáció használatához szükséges tudni a tracking kódokat, valamint egy delivery man azonosító kódot, 
+emellett a csomagok szűrésénél a három megadható paraméter értékeit is alább ismertetem.
+
+Tracking codes: CTAFT0000160477YQ -> country: Hungary; locality: Eger; carrier: GLS
+                ET283232758FH -> country: USA; locality: New York; carrier: FedEx
+                RA123456789CN  -> country: Hungary; locality: Szeged; carrier: UPS
+                HS325713857HW -> country: Hungary; locality: Szeged; carrier: UPS
+                RU3825827384GH -> country: Hungary; locality: Budapest; carrier: GLS
 
 Valid delivery man id: 64383913197
