@@ -3,7 +3,7 @@
 Készítette: Kovács Eszter - D3WQSY
 
 Az applikáció használatához szükséges ismerni a Firestore-ban létező tracking kódokat, valamint egy delivery man azonosító kódot is.
-Emellett a csomagok szűrésénél a három megadható paraméter értékeit is alább ismertetem.
+Emellett a csomagok szűrésénél a három megadható paraméter értékeit is alább ismertetem a könnyebb keresés érdekében.
 
 Tracking codes: CTAFT0000160477YQ -> country: Hungary; locality: Eger; carrier: GLS
                 ET283232758FH -> country: USA; locality: New York; carrier: FedEx
