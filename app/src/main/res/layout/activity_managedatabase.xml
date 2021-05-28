@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pink_cloud_background">
+
+    <TextView
+        android:id="@+id/welcomeSecretTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/secret_part"
+        android:textColor="@color/my_blue"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.113"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:id="@+id/deletePackageLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeSecretTextView"
+        app:layout_constraintVertical_bias="0.2"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/cancelImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#55FFFFFF"
+            android:src="@drawable/cancel"
+            android:contentDescription="@string/cancel_image"
+            android:onClick="startDeletePackage" />
+
+        <TextView
+            android:id="@+id/deleteTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/delete_package"
+            android:textSize="16sp"
+            android:textColor="@color/my_blue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/searchPackageLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deletePackageLinear"
+        app:layout_constraintVertical_bias="0.1">
+
+        <ImageButton
+            android:id="@+id/searchImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#55FFFFFF"
+            android:contentDescription="@string/search_image"
+            android:src="@drawable/search"
+            android:onClick="searchForPackages"/>
+
+        <TextView
+            android:id="@+id/searchPackageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/search_package"
+            android:textSize="16sp"
+            android:textColor="@color/my_blue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/createPackageLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchPackageLinearLayout"
+        app:layout_constraintVertical_bias="0.1">
+
+        <ImageButton
+            android:id="@+id/createImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#55FFFFFF"
+            android:contentDescription="@string/create_image"
+            android:src="@drawable/create"
+            android:onClick="CreatePackage"/>
+
+        <TextView
+            android:id="@+id/createPackageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/create_package"
+            android:textSize="16sp"
+            android:textColor="@color/my_blue" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lost"
+        android:textSize="16sp"
+        android:textColor="@color/my_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createPackageLinearLayout" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_my_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.176"
+        android:onClick="showMyLocation"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

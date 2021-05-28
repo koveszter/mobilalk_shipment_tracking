@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/green_minimal_background">
+
+    <TextView
+        android:id="@+id/updateMainTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/change_shipping_address_text"
+        android:textSize="18sp"
+        android:textColor="@color/my_blue"
+        android:textStyle="italic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/localityLinear"
+        app:layout_constraintVertical_bias="0.068"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/localityLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/updateMainTextView">
+
+        <TextView
+            android:id="@+id/localityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/locality"
+            android:textSize="15sp"
+            android:textColor="@color/my_blue"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <EditText
+            android:id="@+id/actualLocalityEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/streetNumberLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/localityLinear">
+
+        <TextView
+            android:id="@+id/streetNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/street_number"
+            android:textSize="15sp"
+            android:textColor="@color/my_blue"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <EditText
+            android:id="@+id/actualStreetNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:layout_marginTop="5dp"
+            tools:ignore="TextFields" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/streetNameLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/streetNumberLinear">
+
+        <TextView
+            android:id="@+id/streetNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/street_name"
+            android:textSize="15sp"
+            android:textColor="@color/my_blue"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <EditText
+            android:id="@+id/actualStreetNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/streetTypeLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/streetNameLinear">
+
+        <TextView
+            android:id="@+id/streetTypeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/street_style"
+            android:textSize="15sp"
+            android:textColor="@color/my_blue"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <EditText
+            android:id="@+id/actualStreetTypeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/postalCodeLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/streetTypeLinear">
+
+        <TextView
+            android:id="@+id/postalCodeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/postal_code"
+            android:textSize="15sp"
+            android:textColor="@color/my_blue"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <EditText
+            android:id="@+id/actualPostalCodeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:inputType="number"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stateOrProvinceLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/postalCodeLinear">
+
+        <TextView
+            android:id="@+id/stateOrProvinceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/state_or_province"
+            android:textSize="15sp"
+            android:textColor="@color/my_blue"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <EditText
+            android:id="@+id/actualStateOrProvinceEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/countryLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/stateOrProvinceLinear">
+
+        <TextView
+            android:id="@+id/countryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/country"
+            android:textSize="15sp"
+            android:textColor="@color/my_blue"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp" />
+
+        <EditText
+            android:id="@+id/actualCountryEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="updateAddress"
+        android:text="@string/update_address"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countryLinear" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="backToAddress"
+        android:text="@string/cancel"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countryLinear"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

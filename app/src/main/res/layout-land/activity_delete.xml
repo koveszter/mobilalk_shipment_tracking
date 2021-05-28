@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pink_paper_background">
+
+    <TextView
+        android:id="@+id/beSureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="center_horizontal"
+        android:text="@string/be_sure"
+        android:textColor="@color/my_blue"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.232" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beSureTextView"
+        app:layout_constraintVertical_bias="0.245">
+
+        <TextView
+            android:id="@+id/trackNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tracking_number_d_man"
+            android:textColor="@color/my_blue"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/deleteIdEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="180dp"
+            android:layout_marginRight="180dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/tracking_number_hint"
+            android:inputType="textCapCharacters" />
+
+        <Button
+            android:id="@+id/deletePackageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="deletePackage"
+            android:text="@string/delete" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

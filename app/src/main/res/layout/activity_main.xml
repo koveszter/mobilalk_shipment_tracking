@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/pastel_background2" >
+
+    <TextView
+        android:id="@+id/introductionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/introduction"
+        android:textAlignment="center"
+        android:textColor="@color/my_blue"
+        android:textSize="21sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/introductionTextView"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/loginAsGuest"
+        app:layout_constraintTop_toBottomOf="@+id/introductionTextView"
+        app:layout_constraintVertical_bias="0.251"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/loginButton"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="login"
+            android:text="@string/log_in" />
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="registration"
+            android:text="@string/sign_up" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loginAsGuest"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="loginAsGuest"
+        android:text="@string/wait_for_me"
+        app:layout_constraintBottom_toTopOf="@+id/deliverymanImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.163" />
+
+    <ImageView
+        android:id="@+id/deliverymanImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/deliveryman"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/introductionTextView"
+        app:layout_constraintVertical_bias="0.588"
+        app:srcCompat="@drawable/deliveryman_png2_smaller" />
+
+    <Button
+        android:id="@+id/loginAsDeliveryMan"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="loginAsDeliveryMan"
+        android:text="@string/i_m_a_delivery_man"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deliverymanImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

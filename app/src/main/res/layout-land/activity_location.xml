@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/green_leaves_top_frame">
+
+    <TextView
+        android:id="@+id/mainLocationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/current_location"
+        android:textSize="24sp"
+        android:textColor="@color/my_blue"
+        android:textStyle="italic|bold"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <LinearLayout
+        android:id="@+id/firstLocationRow"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainLocationTextView">
+
+        <TextView
+            android:id="@+id/locationCountryTextView"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/country"
+            android:textColor="@color/my_blue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/actualLocationCountryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="50dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/locationLocalityTextView"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/locality"
+            android:textColor="@color/my_blue"
+            android:layout_marginStart="30dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/actualLocationLocalityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="50dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondLocationRow"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstLocationRow">
+
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/address"
+            android:textColor="@color/my_blue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/actualAddressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:layout_below="@+id/secondLocationRow"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/happy_dog_gif" />
+
+</RelativeLayout>
